@@ -1,0 +1,94 @@
+$sidebar-height : 270px;
+
+.circle-box{
+    width: 25px;
+    height: 25px;
+    border-radius: 50%;
+    background-position: center center;
+    background-size: cover;
+    padding: 10px;
+    @include lg {
+        width: 50px; 
+        height: 50px;
+    }
+}
+.thumb.active{
+    font-weight: bold;
+    text-shadow:  0.01em 0.01em 0.1em  yellow;
+}
+
+
+.sidebar{
+    height:$sidebar-height ;
+    margin-bottom: -$sidebar-height;
+    transition: margin-bottom 0.1s;
+}
+
+
+
+.sidebar-toggled{
+    .sidebar{
+        margin-bottom: 0;
+
+    }
+
+
+}
+.ilove{
+    color: #EDC84C;
+    
+}
+.icollect{
+    color: #B4875E;
+}
+.card1{
+    width: 200px; 
+    height: 300px;
+    @include lg {
+        width: 350px; 
+        height: 450px;
+    }
+}
+.img{
+    width: 200px; 
+    height: 200px;
+    @include lg {
+        width: 350px; 
+        height: 350px;
+    }
+}
+
+//展開sidebar
+// .sidebar-toggled{
+//     .sidebar{
+//         margin-bottom: 0;
+//     }
+//     .main{
+//         margin-bottom:-$sidebar-height;
+//     }
+// }
+
+
+//桌面板(UP)
+// @include media-breakpoint-up(lg) {
+//     .sidebar{
+//         margin-left: 0;
+//         width: $sidebar-width;
+//     }
+//     .main{
+//         width: calc(100vw - $sidebar-width);  //calc 不同方式運算   被視為字串要用這樣框起來 #{}
+//         margin-left: $sidebar-width;
+//         transition: margin-left .25s; 
+//     }
+    
+//     //展開
+//     .sidebar-toggled{
+//         .sidebar{
+//             margin-left:  -$sidebar-width;
+//         }
+//         .main{
+//             width: 100%;
+//             margin-left: 0;
+//         }
+//     }
+// }
